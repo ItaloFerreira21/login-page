@@ -1,0 +1,45 @@
+<app-defalt-login-layout
+    title="Faça login e comece hoje mesmo!"
+    primaryBtnText="Inscreva-se agora"
+    secondaryBtnText="Faça login agora"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupForm.valid"
+>
+    <form [formGroup]="signupForm">
+        <app-primary-input
+            formControlName="name"
+            inputName="name"
+            type="text"
+            label="seu nome"
+            placeholder="John Doe"
+        >
+            <img src="/assets/image/svg/email.svg"/>
+        </app-primary-input>
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="Seuemail@gmail.com"
+        >
+            <img src="/assets/image/svg/email.svg"/>
+        </app-primary-input>
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="sua senha"
+        >
+        <img src="/assets/image/svg/senha.svg"/>
+    </app-primary-input>
+    <app-primary-input
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Confirme sua senha"
+    >
+        <img src="/assets/image/svg/senha.svg"/>
+    </app-primary-input>
+    </form>
+</app-defalt-login-layout>

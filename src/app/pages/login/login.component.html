@@ -1,0 +1,29 @@
+<app-defalt-login-layout
+    title="Faça login em sua conta"
+    primaryBtnText="Conecte-se agora"
+    secondaryBtnText="Inscreva-se agora"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!loginForm.valid"
+>
+    <form [formGroup]="loginForm">
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="Seuemail@gmail.com"
+        >
+            <img src="/assets/image/svg/email.svg"/>
+        </app-primary-input>
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Digite Sua senha"
+        >
+        <img src="/assets/image/svg/senha.svg"/>
+    </app-primary-input>
+    <span>Esqueceu sua senha?</span>
+    </form>
+</app-defalt-login-layout>
